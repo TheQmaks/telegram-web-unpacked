@@ -1,0 +1,5 @@
+// This function allow to reference async chunks
+__webpack_require__.miniCssF = (chunkId) => {
+	// return url for filenames based on template
+	return "" + ({"2394":"BundleCalls","4765":"shared-components","6930":"BundleStars","7405":"BundleAuth","7768":"BundleMain","9451":"BundleExtra"}[chunkId] || chunkId) + "." + {"2394":"2c94f932d44adbb096df","4765":"4946f6409cc32050c05a","4810":"b18515f4f38fc7b513fa","6930":"0c34c1bc808124839b20","7405":"2a893454f043b109502f","7768":"8fbc503bea55c2990c5d","8013":"d6d39c9ef36fd739c58e","8104":"5c3ca0b55408b954003c","9451":"2682deb451600b99acc0"}[chunkId] + ".css";
+};

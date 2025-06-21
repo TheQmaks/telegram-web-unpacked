@@ -1,0 +1,37 @@
+__webpack_require__.b = self.location + "";
+
+// object to store loaded chunks
+// "1" means "already loaded"
+var installedChunks = {
+	9443: 1
+};
+
+// importScripts chunk loading
+var installChunk = (data) => {
+	var [chunkIds, moreModules, runtime] = data;
+	for(var moduleId in moreModules) {
+		if(__webpack_require__.o(moreModules, moduleId)) {
+			__webpack_require__.m[moduleId] = moreModules[moduleId];
+		}
+	}
+	if(runtime) runtime(__webpack_require__);
+	while(chunkIds.length)
+		installedChunks[chunkIds.pop()] = 1;
+	parentChunkLoadingFunction(data);
+};
+__webpack_require__.f.i = (chunkId, promises) => {
+	// "1" is the signal for "already loaded"
+	if(!installedChunks[chunkId]) {
+		if(true) { // all chunks have JS
+			importScripts(__webpack_require__.p + __webpack_require__.u(chunkId));
+		}
+	}
+};
+
+var chunkLoadingGlobal = self["webpackChunktelegram_t"] = self["webpackChunktelegram_t"] || [];
+var parentChunkLoadingFunction = chunkLoadingGlobal.push.bind(chunkLoadingGlobal);
+chunkLoadingGlobal.push = installChunk;
+
+// no HMR
+
+// no HMR manifest
