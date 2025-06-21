@@ -50,7 +50,7 @@ If a team uses custom protocols or proprietary crypto, an exposed map file:
 npm i -g kaifu
 
 # Unpack a single .map
-kaifu --o ./src ./dist/app.js.map
+kaifu -o ./src ./dist/app.js.map
 ```
 
 ---
